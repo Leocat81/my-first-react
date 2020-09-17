@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+// import logo from './logo.svg';
+// import { Button } from "antd";
+// import { Upload, message } from "antd";
+// import { UploadOutlined } from "@ant-design/icons";
+import Index from "./component/test.jsx";
+import Login from "./component/login/login";
+import "./App.css";
 
-const App=(data)=> {
-  var a=9999
-  return <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.{data.name}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-}
+const App = (data) => {
+  return (
+    <Router>
+      <div>
+        <Route path="/" exact component={Index}></Route>
+        <Route path="/login" component={Login}></Route>
+      </div>
+    </Router>
+  );
+};
 
 export default App;
