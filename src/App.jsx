@@ -12,8 +12,8 @@ const App = (data) => {
   return (
     <Router>
       <div>
-        <Route path="/" exact component={Index}></Route>
-        <Route path="/login" component={Login}></Route>
+        <Route path="/login" exact component={Index}></Route>
+        <Route path="/" component={Login}></Route>
       </div>
     </Router>
   );
