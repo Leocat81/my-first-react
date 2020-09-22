@@ -20,9 +20,9 @@ class login extends React.Component {
       .catch((err) => {
         console.log(err);
       });
-    debugger;
     if (res1.data.token) {
       db.save("token", res1.data.token);
+      this.props.history.push("/home");
     }
   }
   render() {

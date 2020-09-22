@@ -2,7 +2,7 @@ import axios from "axios";
 import { message } from "antd";
 import moment from "moment";
 import db from "./db.js";
-import ErrorBoundary from "antd/lib/alert/ErrorBoundary";
+// import ErrorBoundary from "antd/lib/alert/ErrorBoundary";
 moment.locale("zh-cn");
 
 // 统一配置
