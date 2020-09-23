@@ -36,8 +36,6 @@ FEBS_REQUEST.interceptors.request.use(
     // }
     // // 有 token就带上
     if (db.get("token").length) {
-      debugger;
-      console.log(db.get("token"));
       config.headers.Authentication = db.get("token");
     }
     return config;

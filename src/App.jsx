@@ -12,8 +12,8 @@ const App = (data) => {
   return (
     <Router>
       <Switch>
+        <Route exact path="/" component={Login}></Route>
         <Route path="/home" component={Home}></Route>
-        <Route path="/login"  component={Login}></Route>
       </Switch>
     </Router>
   );
