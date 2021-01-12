@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Layout, Menu, Breadcrumb } from "antd";
 import { Route,Link } from "react-router-dom";
 import UserGroup from "./usergroup/UserGroup.jsx";
+import index from "./homepage/index.jsx";
 import  './Home.css';
 const { Header, Content, Footer } = Layout;
 class Home extends Component {
@@ -24,7 +25,7 @@ class Home extends Component {
             onClick={this.handleClick}
           >
             <Menu.Item key="1">
-              <Link to="/home">首页</Link>
+              <Link to="/home/index">首页</Link>
             </Menu.Item>
             <Menu.Item key="2">
               <Link to="/home/usergroup">用户组管理</Link>
@@ -43,6 +44,7 @@ class Home extends Component {
           <div className="site-layout-content">
             {/* 嵌套路由url必须是接在前一个url后面，例如此处必须写/home/usergroup，不能写为/other/UserGroup */}
             <Route path="/home/usergroup" component={UserGroup} />
+            <Route path="/home/index" component={index} />
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>

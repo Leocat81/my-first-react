@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Tag, Space } from "antd";
+import { Table } from "antd";
 import request from "../../common/request.js";
 class UserGroup extends React.Component {
   constructor(props) {
@@ -26,6 +26,7 @@ class UserGroup extends React.Component {
             dataSource:res.data
           });
  });
+ console.log(res1);
   }
   render() {
     return (
