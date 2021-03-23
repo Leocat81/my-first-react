@@ -13,7 +13,7 @@
 
 import React, { useState } from 'react';
 
-export default function Example() {
+export default ()=> {
   // 声明一个新的叫做 “count” 的 state 变量
   const [count, setCount] = useState(100);
 

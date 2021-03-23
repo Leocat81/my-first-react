@@ -13,7 +13,7 @@ class login extends React.Component {
   async submit(event) {
     let { username, password } = this.state;
     console.log(username, password);
-     this.props.history.push("/home");
+     this.props.history.push("/home/index");
     // let res1 = await request
     //   .post("/login", {
     //     username: username,
