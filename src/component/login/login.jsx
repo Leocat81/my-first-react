@@ -13,17 +13,18 @@ class login extends React.Component {
   async submit(event) {
     let { username, password } = this.state;
     console.log(username, password);
-    let res1 = await request
-      .post("/login", {
-        username: username,
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    if (res1.data.token) {
-      db.save("token", res1.data.token);
-      this.props.history.push("/home");
-    }
+     this.props.history.push("/home");
+    // let res1 = await request
+    //   .post("/login", {
+    //     username: username,
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+    // if (res1.data.token) {
+    //   db.save("token", res1.data.token);
+    //   this.props.history.push("/home");
+    // }
   }
   render() {
     return (
